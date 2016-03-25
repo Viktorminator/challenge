@@ -1,5 +1,5 @@
-include ../modules/head/head
-include ../modules/_page-list/_page-list
+include ../includes/head/head
+include ../modules/icon/icon
 
 doctype html
 html(class="no-js" lang="ru")
@@ -7,12 +7,171 @@ html(class="no-js" lang="ru")
 	head
 		+head(head.index)
 
-	style
-		:stylus
-			body
-				background #fff
+	body
+		header
+			nav.main
+				a.main__logo
+					img(src='img/vectors/logo.png', alt='SCRIPTUM')
+				a.main__menu
+					img(src='img/vectors/menu.svg')
+		.about
+			img.about__image
+			h2.about__title ABOUT SCRIPTUM
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, qui. Ipsum, minus facere odio, quas placeat totam quam hic voluptate eaque commodi nulla fugit tempora ducimus ab iure quibusdam autem aliquid sit nihil adipisci reiciendis atque dolorum esse nam. Officia.
+			a.about__link READ MORE
+		.works
+			h2.works__title WORKS 
+			ul.works__categories
+				li
+					a(href='', data-filter="*") ALL
+				li
+					a(href='', data-filter=".design") DESIGN
+				li
+					a(href='', data-filter=".web") WEB
+				li
+					a(href='', data-filter=".brand") BRAND
+				li
+					a(href='', data-filter=".art") ART
+			ul.works__thumbs
+				li
+					.works__thumbs__item
+						img(src='img/content/image1.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image2.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image3.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image4.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image5.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image6.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image7.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image8.png')
+				li
+					.works__thumbs__item
+						img(src='img/content/image1.png')
+		.webdev
+			.webdev__container
+				a(href='')
+					img(src='img/content/webdev.png')
+					.webdev__container__title
+						h3 WEB DEVELOPMENT
+			.webdev__features
+				i.webdev__features__icon.icon--ruler
+				.webdev__features--content
+					h4 DESIGN
+				i.webdev__features__icon.icon--lamp
+				.webdev__features--content
+					h4 NIGHT WORK
+				i.webdev__features__icon.icon--plane
+				.webdev__features--content
+					h4 COMMUNICATION
+				i.webdev__features__icon.icon--key
+				.webdev__features--content
+					h4 SAFETY
+				i.webdev__features__icon.icon--compass
+				.webdev__features--content
+					h4 COORDINATION
+				i.webdev__features__icon.icon--wheel
+				.webdev__features--content
+					h4 DEVELOPMENT
 
-			@import "../modules/_page-list/_page-list.styl"
+		.skills
+			h3.skills__title SKILLS
+			
+			h5 DESIGN
+			.skills__bar(role='progressbar', aria-valuenow='95', aria-valuemin='0', aria-valuemax='100', style='width: 95%;')
+			h5 CSS3
+			.skills__bar(role='progressbar', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100', style='width: 85%;')
+			h5 JAVASCRIPT
+			.skills__bar(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
 
-	body.page
-		+page-list(pageList.data)
+		.desc
+			.decs__span
+				i.desc__span__icon.icon--mountains
+				h5 BEAUTIFUL PHOTOS
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minima saepe rem voluptatum id repellat assumenda soluta dolore expedita harum. Aspernatur illo ex nesciunt accusamus ipsam quas perferendis sapiente in fugit eveniet assumenda provident autem laborum itaque ab, dolorum reiciendis?
+			.decs__span
+				i.desc__span__icon.icon--mountains
+				h5 FULL RESPONSIVE
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minima saepe rem voluptatum id repellat assumenda soluta dolore expedita harum. Aspernatur illo ex nesciunt accusamus ipsam quas perferendis sapiente in fugit eveniet assumenda provident autem laborum itaque ab, dolorum reiciendis?
+			.desc__span
+				img(src='img/content/iphone.png')
+			.decs__span
+				i.desc__span__icon.icon--mountains
+				h5 BRETINA READY
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minima saepe rem voluptatum id repellat assumenda soluta dolore expedita harum. Aspernatur illo ex nesciunt accusamus ipsam quas perferendis sapiente in fugit eveniet assumenda provident autem laborum itaque ab, dolorum reiciendis?
+			.decs__span
+				i.desc__span__icon.icon--mountains
+				h5 COFFEESCRIPT CRAFTED
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minima saepe rem voluptatum id repellat assumenda soluta dolore expedita harum. Aspernatur illo ex nesciunt accusamus ipsam quas perferendis sapiente in fugit eveniet assumenda provident autem laborum itaque ab, dolorum reiciendis?
+		
+		.news
+			h3 NEWS
+			.news__item
+				img(src='img/content/news1.png')
+				a(href='#').news__item--autor Stone Clad
+				span.news__item--date 28.01.2017
+				h5 Lorem ipsum dolor sit amet
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, obcaecati!
+				a(href='#').news__item--more LEARN MORE
+			.news__item
+				img(src='img/content/news1.png')
+				a(href='#').news__item--autor Stone Clad
+				span.news__item--date 28.01.2017
+				h5 Lorem ipsum dolor sit amet
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, obcaecati!
+				a(href='#').news__item--more LEARN MORE
+			.news__item
+				img(src='img/content/news1.png')
+				a(href='#').news__item--autor Stone Clad
+				span.news__item--date 28.01.2017
+				h5 Lorem ipsum dolor sit amet
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, obcaecati!
+				a(href='#').news__item--more LEARN MORE
+
+		.quotes
+			.quotes__slider
+				ul
+					li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic molestias et officiis esse. Ducimus ullam inventore dolorem, dolorum, sequi vero laborum nam provident quaerat!
+					li Facilis at in iste, ratione nemo voluptatem. Eaque mollitia obcaecati magni ipsum. Aspernatur nobis, cum iure. Dolor facere, voluptatibus voluptates nesciunt, aliquam id. Id, hic, repudiandae!
+					li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic molestias et officiis esse. Ducimus ullam inventore dolorem, dolorum, sequi vero laborum nam provident quaerat!
+					li Facilis at in iste, ratione nemo voluptatem. Eaque mollitia obcaecati magni ipsum. Aspernatur nobis, cum iure. Dolor facere, voluptatibus voluptates nesciunt, aliquam id. Id, hic, repudiandae!
+			.quotes__item
+				.quotes__item__title
+					h2 QUOTES FROM EAST NORTH CLIENTS
+
+		.contacts
+			h2.contacts__title
+			form(action='/', method='post')
+				.top-row
+					.field-wrap
+						input(type='text', required='required', autocomplete='off')
+					.field-wrap
+						input(type='text', required='required', autocomplete='off')
+				.field-wrap
+					input(type='email', required='required', autocomplete='off', placeholder='*email')
+				.field-wrap
+					textarea(placeholder='message')
+				button.button.button-block(type='submit') send
+
+		.copyright
+			a.copyrights__icon.icon--twitter(href='http://twitter.com/')
+				i.fa.fa-twitter
+			a.copyrights__icon.icon--fa(href='https://www.facebook.com/')
+				i.fa.fa-facebook
+			a.copyrights__icon.icon--behance(href='http://behance.com/')
+				i.fa.fa-behance
+			a.copyrights__top.icon--top(href="#")
+				
+				

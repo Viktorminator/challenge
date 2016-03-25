@@ -1,0 +1,35 @@
+.main
+	backImage('../img/content/title.png', 500px)
+	margin 35px
+	display flex
+	&__logo
+		position relative
+		justify-content flex-start
+		padding 55px
+		width 77px
+		display flex-row
+		&:after
+			position absolute
+			content ""
+			width 77px
+			height 111px
+			border 3px solid white
+			top 35px - 10px - 3px
+			left 55px - 25px - 3px
+		&:before
+			position absolute
+			content ""
+			width 77px
+			height 111px
+			border 3px solid white
+			top 35px - 10px + 3px
+			left 55px - 25px + 3px
+		&:hover
+			cursor pointer
+	&__menu
+		position relative
+		justify-content flex-end
+		background-color white
+		padding 55px
+		width 77px
+		display flex-row
